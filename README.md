@@ -1,13 +1,15 @@
-# Unity-Simple-SRT
-A super simple SRT subtitle parser
+# Unity-Simple-SRT (Modified)
+A modified super simple SRT subtitle parser
+
+Original by roguecode and Modified by Legaiabay.
 
 It'll parse most sane SRT's, and will display them in a `Text` element, crossfading between lines depending on a `Fade Time` you set.
 
 ## To use it
 - Add the `Subtitle Displayer` component to something in the world. 
 - Create two `Text` UI elements, both the same, and drag their references to the `Subtitle Displayer` component.
-- Rename your `.srt` file to `.txt`, then drag it to the `Subtitle` field on `Subtitle Displayer`.
-- Call `StartCoroutine(subtitleDisplayer.Begin())` to start the subtitles.
+- With this modified script, now you can choose between `Text Asset` or `SRT` mode in `Subtitle Displayer` component. `Text Asset` mode will use same method as original by renaming `.srt` file to `.txt`. With `SRT` mode, you can directly use `.srt` file without renaming it by putting `.srt` file to `StreamingAssets` folder and add file path to `Subtitle Path` in `Subtitle Displayer` component.
+- Simply Call `BeginSubtitle()` to start the subtitles.
 
 A sub file like this:
 ```
